@@ -1,10 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
-import { Platform } from 'react-native';
 
-const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY!;
+const supabaseUrl = 'https://ffomyqmyactoylflhgvk.supabase.co';
+const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZmb215cW15YWN0b3lsZmxoZ3ZrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg3MjIwOTUsImV4cCI6MjA5NDI5ODA5NX0.0nddAhZBCDQBYmnzwj3eOl4P2QMwZI0jHRj13JSFliY';
 
-// expo-secure-store no funciona en web, usamos localStorage
 const webStorageAdapter = {
   getItem: (key: string) => {
     const value = localStorage.getItem(key);
