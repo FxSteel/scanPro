@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "echo \"EXPO_PUBLIC_SUPABASE_URL=$EXPO_PUBLIC_SUPABASE_URL\" > .env && echo \"EXPO_PUBLIC_SUPABASE_ANON_KEY=$EXPO_PUBLIC_SUPABASE_ANON_KEY\" >> .env && npm run build",
   "outputDirectory": "dist",
   "framework": null,
   "rewrites": [
