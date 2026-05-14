@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "DeliveryExpress",
+    "slug": "DeliveryExpress",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#2563EB"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Necesitamos la camara para escanear codigos QR de paquetes",
+        "NSLocationWhenInUseUsageDescription": "Necesitamos tu ubicacion para registrar el punto de entrega",
+        "NSPhotoLibraryUsageDescription": "Necesitamos acceso a fotos para adjuntar foto de entrega"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#2563EB"
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "READ_EXTERNAL_STORAGE"
+      ],
+      "package": "com.deliveryexpress.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Necesitamos la camara para escanear codigos QR de paquetes"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Necesitamos tu ubicacion para registrar el punto de entrega"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Necesitamos acceso a fotos para adjuntar foto de entrega"
+        }
+      ]
+    ]
+  }
+}
